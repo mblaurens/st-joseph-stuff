@@ -59,9 +59,9 @@ public class SJCPenney {
     private String receipt(BigDecimal[] a) { 
 	String r = "";
 	for(int i=0; i<items.length; i++) {
-	    r+=items[i]+" "+a[i]+"\n";
+	    r+=items[i]+"\t"+a[i]+"\n";
 	}
-        r+="TOTAL "+getTotal(a)+"\n";
+        r+="TOTAL\t"+getTotal(a)+"\n";
 	return r;
     }
 
@@ -77,9 +77,9 @@ public class SJCPenney {
 	else {in = args[0];}
 
 	SJCPenney nope = new SJCPenney(in);
-	System.out.println("original:");
-	System.out.println(nope.origReceipt());
-	System.out.println("discounted:");
+	//System.out.println("original:");
+	//System.out.println(nope.origReceipt());
+	//System.out.println("discounted:");
 	System.out.println(nope.discReceipt());
     }
 }
